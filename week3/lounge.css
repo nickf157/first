@@ -1,5 +1,8 @@
+body {
+  font-family: sans-serif;
+}
+
 h1, h2 {
-    font-family: sans-serif;
     color: grey;
    
   }
@@ -10,5 +13,25 @@ h1, h2 {
 
 
   p {
+    color: maroon;
+  }
+
+  em {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  p.green-tea {
+    color: green;
+  }
+
+  p.raspberry {
+    color: blue;
+  }
+
+  p.blueberry {
+    color: purple;
+  }
+
+  p.cranberry {
     color: maroon;
   }
