@@ -58,6 +58,7 @@ footer {
 
 li {
     padding: 5px;
+    text-align: left;
 }
 
 li.projects {
