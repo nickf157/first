@@ -1,0 +1,67 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+form button {
+    display: block;
+    padding: 0.5rem 1rem;
+    background: hsl(120, 56%, 40%);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 5rem;
+    margin-left: auto;
+}
+
+header {
+    text-align: center;
+    background-color: teal;
+    padding: 30px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    float: inline-start;
+}
+
+nav a:link {
+    color: teal;
+    text-decoration-line: none;
+}
+
+nav a:visited {
+    color: teal;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 8px;
+    margin: 5px;
+}
+
+.img {
+    width: 140px;
+    height: 110px;
+    float: left;
+    margin-right: 20px;
+    
+}

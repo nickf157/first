@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .slider {
+            width: 150px;
+            height: 50px;
+            color: white;
+            background-color: dodgerblue;
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-weight: bold;
+            border-radius: 8px;
+            animation: slideInOut 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes slideInOut {
+            from {
+                transform: translateY(-100px);
+            }
+
+            to {
+                transform: translateY(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class ="slider">Sliding</div>
+</body>
+</html>

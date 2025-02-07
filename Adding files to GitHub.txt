@@ -1,5 +1,0 @@
-Adding files to GitHub: 
-git add*
-git status
-git commit -m "any message"
-git push
