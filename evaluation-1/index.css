@@ -1,0 +1,248 @@
+/*
+    ** IMPORTANT NOTE **
+
+    Styles do not have to match the provided solution exactly - try to get it as close as possible, paying attention to the requirements noted below.
+*/
+
+
+
+/*
+    Begin by creating five variables representing BCIT's brand colors
+
+    The variables can be named whatever you like, but the values must be:
+        #003c71                     (dark blue)
+        #296cf6                     (blue)
+        rgb(0 37 85 / 0.8)          (transparent blue)
+        #ffffff                     (white)
+        #fff400                     (yellow)
+
+    * NOTE: anywhere a color is required in your rules below, you MUST use the CSS variable - no hard-coded colors are allowed
+*/
+:root {
+    --darkblue: #003c71;
+    --blue: #296cf6;
+    --transparentblue: rgb(0 37 85 / 0.8);
+    --white: #ffffff;
+    --yellow: #fff400;
+}
+/*
+    HEADER STYLES
+    -------------
+    The header must: 
+        - extend all the way from the left edge of the viewport to the right edge of the viewport
+        - have a white background
+
+    The div with class 'menubar' must:
+        - have a dark blue background
+    
+    The list items inside the div with class 'menubar' must:
+        - have white text
+        - have a dark blue background
+        - have bold font weight
+        - must transition to dark blue text over a yellow background when hovered over
+        (use the transition property like- transition: background-color 500ms linear;)
+
+    All elements inside the div with class 'header' must be stacked horizontally across the page
+
+    The h1 with class logo must be 64px wide and 54px tall 
+
+    The list items inside the div with class 'header' must:
+        - have dark blue text
+        - have bold font weight
+        - have no underline (normally OR when hovered over)(Hint: use the text-decoration and set it to none).
+        - must transition to blue text with a 2px solid yellow bottom border when hovered over
+            * TIP: to avoid the position of the element "jumping" when hovering over, apply a default
+             bottom border of 2px solid transparent
+*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: var(--white);
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menubar {
+    background-color: var(--darkblue);
+}
+
+.menubar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex: 1;
+    justify-content: right;
+    margin-top: 0px;
+    margin-right: 50px;
+    font-size: 80%;
+    
+}
+
+.menubar li {
+    color: var(--white);
+    background-color: var(--darkblue);
+    font-weight: bold;
+    transition: background-color 500ms linear;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.menubar li:hover {
+    background-color: var(--yellow);
+    cursor: default;
+}
+
+.header {
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 0px;
+    height: 80px;
+}
+
+.header ul {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header li {
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+.header a {
+    color: var(--darkblue);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 1s;
+    transition: border-bottom 1s;
+}
+
+.header a:hover {
+    color: var(--blue);
+    border-color: var(--yellow);
+    text-decoration: none;
+}
+
+.logo {
+    width: 64px;
+    height: 54px;
+}
+
+/*
+    BIG INFO STYLES
+    ---------------
+    The section with id 'big-info' must:
+        - be 800px tall
+        - use the bcit-big-info.png image located inside the images folder as its background 
+
+    The div with class 'overlay' must:
+        - be positioned absolutely INSIDE the #big-info section (i.e. any values of top, right, bottom, and left must be relative to the #big-info element)
+        
+    All elements inside the div with class 'overlay' must: 
+        - have white text
+        - have appropriate font size and weight
+
+    The button element inside the div with class 'overlay' must:
+        - have a 1px solid white border
+        - have appropriate padding on the top, right, bottom, and left sides
+        - transition to a transparent blue background on hover ( transition: background-color 200ms ease-in;)
+*/
+
+#big-info {
+    height: 800px;
+    background-image: url("images/bcit-big-info.png")
+}
+
+.overlay h1 {
+    position: relative;
+    top: 500px;
+    left: 60px;
+    width: 500px;
+    font-size: 300%;
+    color: var(--white);
+}
+
+.overlay p {
+    position: relative;
+    top: 520px;
+    left: 60px;
+    width: 900px;
+    font-size: 145%;
+    color: var(--white);
+}
+
+.overlay button {
+    border: 1px solid var(--white);
+    position: relative;
+    text-align: left;
+    color: var(--white);
+    font-size: 125%;
+    top: 560px;
+    left: 60px;
+    width: 200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    background-color: transparent;
+    transition: background-color 200ms ease-in;
+    font-weight: bold;
+}
+
+.overlay button:hover {
+    background-color: var(--transparentblue);
+}
+
+
+/*
+    WELCOME STYLES
+    --------------
+
+    The h1 inside the section with id 'welcome' must:
+        - have dark blue text
+        - have appropriate font size and weight
+        - be placed sufficiently far enough away from the top and left edges of the section
+
+*/
+
+
+#welcome {
+    color: var(--darkblue);
+    margin: 70px;
+    font-size: 160%;
+    font-weight: bold;
+}
+
+/*
+General hint
+Use the selectors appropriately (example: menubar ul, menubar li, menubar li:hover and so on...) 
+*/
+
+header {
+    position: fixed;
+    z-index: 10;
+}
+
+.overlay {
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.menubar li:hover {
+    color: var(--dark-blue);
+    background-color: var(--yellow);
+}

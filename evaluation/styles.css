@@ -3,11 +3,30 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: teal;
+    padding: 0px;
+    margin-top: auto;
 }
 
 form {
     border: 1px solid #ccc;
     padding: 1rem;
+    position: absolute;
+    width: 750px;
+    top: 240px;
+    left: 130px;
 }
 
 input,
@@ -40,6 +59,13 @@ nav {
     float: inline-start;
 }
 
+li {
+    padding-bottom: 7px;
+    margin: 8px;
+    margin-left: 0px;
+    
+}
+
 nav a:link {
     color: teal;
     text-decoration-line: none;
@@ -51,17 +77,21 @@ nav a:visited {
 
 ul {
     list-style: none;
-}
-
-li {
-    padding: 8px;
-    margin: 5px;
+    margin-bottom: 100px;
+    margin-right: 13px;
 }
 
 .img {
-    width: 140px;
-    height: 110px;
+    width: 150px;
+    height: 120px;
     float: left;
     margin-right: 20px;
-    
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    li {
+      display: flex;
+      flex-direction: row;
+    }
 }
